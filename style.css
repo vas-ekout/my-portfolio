@@ -25,6 +25,7 @@ header {
     position: sticky;
     top: 0;
     justify-content: end;
+    z-index: 10;
 }
 
 nav {
@@ -50,12 +51,12 @@ header .logo a {
 }
 
 .navbar li a::before {
-        display: block;
-        content: attr(title);
-        font-weight: 700;
-        height: 0;
-        overflow: hidden;
-        visibility: hidden;
+    display: block;
+    content: attr(title);
+    font-weight: 700;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
 }
 
 .navbar li a:hover {
@@ -75,4 +76,62 @@ header nav ul a {
     font-size: 14px;
     color: black;
     text-decoration: none;
+}
+
+
+/* Section About Styling */
+
+.about {
+    /* background-color: aqua; */
+}
+
+.fed-head {
+    padding: 100px 100px 0 100px;
+    position: relative;
+    z-index: 2;
+}
+
+.fed-head h1 {
+    font-family: 'Syncopate', sans-serif;
+    font-weight: 400;
+    font-size: 100px;
+    color: black;
+}
+
+.fed-portrait-container {
+    position: relative;
+    top: -50px;
+    padding-left: 50px;
+    z-index: 1;
+}
+
+#fed-portrait {
+    width: 420px;
+    border-radius: 1000px;
+}
+
+.about-content {
+    max-width: 36%;
+    /* padding: 0 30% 0 40%; */
+    position: relative;
+    top: -280px;
+    left: 45%;
+    z-index: 2;
+}
+
+.section-head {
+    font-family: 'Syncopate', sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.about-content p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    color: black;
+    letter-spacing: 0.75px;
+    line-height: 29px;
 }
