@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Syncopate:wght@400;700&display=swap');
+
+/* General Styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Header Styling */
+hr {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    border-width: 0.5px;
+    border-style: solid;
+    border-color: #707070;
+}
+
+header {
+    background-color: #fff;
+    width: 100%;
+    padding: 100px 100px 0px 100px;
+    position: sticky;
+    top: 0;
+    justify-content: end;
+}
+
+nav {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    display: flex;
+}
+
+header .logo {
+    margin-right: auto;
+}
+
+header .logo a {
+    font-family: 'Syncopate', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: black;
+    text-decoration: none;
+}
+
+.navbar li {
+    text-align: center;
+}
+
+.navbar li a::before {
+        display: block;
+        content: attr(title);
+        font-weight: 700;
+        height: 0;
+        overflow: hidden;
+        visibility: hidden;
+}
+
+.navbar li a:hover {
+    font-weight: 700;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+header nav ul a {
+    font-family: 'Syncopate', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: black;
+    text-decoration: none;
+}
