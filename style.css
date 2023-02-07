@@ -69,6 +69,10 @@ nav {
     display: flex;
 }
 
+.nav-toggle {
+    display: none;
+}
+
 header .logo {
     margin-right: auto;
 }
@@ -397,4 +401,66 @@ button:hover {
 
 @media only screen and (max-width: 580px) {
     
+    header {
+        padding: 0rem 2rem 0 2rem;
+    }
+
+    header .logo a {
+        position: relative;
+        top: 12px;
+    }
+
+    .navbar {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    /* Burger Menu Styling */
+
+    .burger-utility {
+        overflow: hidden;
+        height: 0px;
+        transform-origin: top;
+        transition: 200ms ease-in-out;
+    }
+
+    .nav-toggle:checked ~ .burger-utility {
+        height: 164px;
+    }
+
+    .nav-toggle-label {
+        position: absolute;
+        top: 46px;
+        right: 0;
+        margin-right: 2rem;
+        height: 100%;
+    }
+
+    .nav-toggle-label span,
+    .nav-toggle-label span::before,
+    .nav-toggle-label span::after {
+        display: block;
+        background: #000;
+        height: 1px;
+        width: 2em;
+        border-radius: 2px;
+        position: relative;
+    }
+
+    .nav-toggle-label span::before,
+    .nav-toggle-label span::after {
+        content: '';
+        position: absolute;
+    }
+
+    .nav-toggle-label span::before {
+        bottom: 7px;
+    }
+
+    .nav-toggle-label span::after {
+        top: 7px;
+    }
+
 }
