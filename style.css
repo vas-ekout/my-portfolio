@@ -1,5 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Syncopate:wght@400;700&display=swap');
 
+:root {
+    --clr-light: #fff;
+    --clr-dark: #353535;
+    --clr-accent-light: #f0f0f0;
+    --clr-accent-dark: #5d5d5d;
+}
+
+/* Dark Mode Styling */
+.darkmode {
+    --clr-light: #18151b;
+    --clr-dark: #fff;
+    --clr-accent-light: #37343b;
+    --clr-accent-dark: #b8adc3;
+}
+
 /* General Styling */
 
 html {
@@ -13,6 +28,10 @@ html {
     font-family: 'Montserrat', sans-serif;
 }
 
+body {
+    background: var(--clr-light);
+}
+
 .main-frame {
     max-width: 2048px;
     margin: auto;
@@ -22,7 +41,7 @@ h1 {
     font-family: 'Syncopate', sans-serif;
     font-weight: 400;
     font-size: clamp(12px, 6vw, 100px);
-    color: black;
+    color: var(--clr-dark);
     position: relative;
     z-index: 2;
 }
@@ -31,7 +50,7 @@ h2 {
     font-family: 'Syncopate', sans-serif;
     font-weight: 400;
     font-size: 2.5rem;
-    color: black;
+    color: var(--clr-dark);
 }
 
 h3 {
@@ -39,14 +58,14 @@ h3 {
     font-weight: 700;
     font-style: italic;
     font-size: 1.125rem;
-    color: black;
+    color: var(--clr-dark);
 }
 
 p {
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
     font-size: 1.25rem;
-    color: black;
+    color: var(--clr-dark);
     letter-spacing: 0.0575ch;
     line-height: 2.19ch;   
 }
@@ -54,7 +73,7 @@ p {
 /* Header Styling */
 
 header {
-    background-color: #fff;
+    background-color: var(--clr-light);
     padding: 1rem 4rem 0 4rem;
     margin: 0 0 6rem 0;
     position: sticky;
@@ -81,7 +100,7 @@ header .logo a {
     font-family: 'Syncopate', sans-serif;
     font-weight: 400;
     font-size: 0.875rem;
-    color: black;
+    color: var(--clr-dark);
     text-decoration: none;
 }
 
@@ -95,7 +114,7 @@ header .logo a {
     font-family: 'Syncopate', sans-serif;
     font-weight: 400;
     font-size: 0.875rem;
-    color: black;
+    color: var(--clr-dark);
     text-decoration: none;
 }
 
@@ -116,10 +135,25 @@ header .logo a {
     font-weight: 700;
 }
 
+.dark-mode-toggle {
+    top: 2.4rem;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+  }  
+
+path {
+    fill: var(--clr-dark);
+}
+
 hr {
     border-width: 0.5px;
     border-style: solid;
-    border-color: #707070;
+    border-color: var(--clr-accent-dark);
 }
 
 section {
@@ -163,7 +197,7 @@ section {
 /* Projects Styling */
 
 #projects {
-    background-color: #f0f0f0;
+    background-color: var(--clr-accent-light);
     padding: 6rem 2.5rem 6rem 2.5rem;
 }
 
@@ -195,7 +229,7 @@ section {
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
     font-size: 1rem;
-    color: black;
+    color: var(--clr-dark);
     letter-spacing: 0.03ch;
     line-height: 1.375rem;
 }
@@ -240,7 +274,7 @@ section {
 /* Contact Styling */
 
 #contact {
-    background-color: #f0f0f0;
+    background-color: var(--clr-accent-light);
     margin-bottom: 0;
     padding: 6rem 2.5rem 6rem 2.5rem;
     text-align: center;
@@ -250,11 +284,11 @@ section {
     margin-bottom: 3rem;
 }
 
-button {
-    background-color: #fff;
+button.email {
+    background-color: var(--clr-light);
     margin-top: 4rem;
     border: none;
-    color: #000;
+    color: var(--clr-dark);
     padding: 18px 44px;
     border-radius: 100px;
     font-family: 'Montserrat', sans-serif;
@@ -264,9 +298,9 @@ button {
     cursor: pointer;
 }
 
-button:hover {
-    background-color: #5D5D5D;
-    color: #fff;
+button.email:hover {
+    background-color: var(--clr-accent-dark);
+    color: var(--clr-light);
     transform: rotate(1turn);
     transition: 0.25s ease-in;
 }
@@ -308,7 +342,7 @@ button:hover {
     } 
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 800px) {
 
     /* General Styling */
 
@@ -339,6 +373,13 @@ button:hover {
         align-items: center;
         gap: 1.25rem
     }
+
+    .dark-mode-toggle {
+        position: absolute;
+        top: 98px;
+        left: 64px;
+      }  
+    
 
     .logo {
         margin-left: auto;
@@ -424,6 +465,12 @@ button:hover {
         top: 12px;
     }
 
+    .dark-mode-toggle {
+        position: absolute;
+        top: 35px;
+        left: 32px;
+      }  
+
     .navbar {
         margin-top: 1rem;
         margin-bottom: 1rem;
@@ -469,7 +516,7 @@ button:hover {
     .nav-toggle-label span::before,
     .nav-toggle-label span::after {
         display: block;
-        background: #000;
+        background: var(--clr-dark);
         height: 1px;
         width: 2em;
         border-radius: 2px;
