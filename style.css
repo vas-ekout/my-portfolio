@@ -292,17 +292,19 @@ button:hover {
         gap: 5rem 2.5rem;
     }
 
+      /* Skills Styling */
+
         .skills-grid-item img {
             max-width: 7vw;
     }
 
-      /* Skills Styling */
-
       .skills-grid-container {
         grid-template-columns: repeat(6, auto);
+        gap: 1rem;
     }
     .skills-grid-container li p {
-        font-size: clamp(0.5rem, calc(1.0vw + 3px), 1rem);
+        margin-top: 0;
+        font-size: clamp(0.75rem, calc(1.0vw + 3px), 1rem);
     } 
 }
 
@@ -320,6 +322,10 @@ button:hover {
     
     p {
         font-size: 1.2rem;
+    }
+    
+    section {
+        margin: 0 0 4rem 0;
     }
     
     /* Header Styling */
@@ -346,7 +352,7 @@ button:hover {
     /* About Styling */
 
     #about {
-        margin-bottom: 3rem;
+        margin-bottom: 4rem;
     }
 
     .grid-container-about {
@@ -370,7 +376,7 @@ button:hover {
         grid-column-end: 5;
         max-width: 55ch;
         align-self: start;
-        padding: 10% 0 10% 0;
+        padding: 3rem 0 0 0;
     }
 
     .portrait-img {
@@ -385,8 +391,12 @@ button:hover {
 
     /* Projects Styling */
 
-    #projects h2 {
-        margin-bottom: 3rem;
+      #projects {
+        padding: 4rem 2.5rem 4rem 2.5rem;
+      }
+
+        #projects h2 {
+            margin-bottom: 3rem;
     }
     
     /* Skills Styling */
@@ -396,7 +406,11 @@ button:hover {
     }
 
     /* Contact Styling */
-   
+
+    #contact {
+        padding: 4rem 2.5rem 4rem 2.5rem;
+    }
+    
 }
 
 @media only screen and (max-width: 580px) {
@@ -423,11 +437,16 @@ button:hover {
         overflow: hidden;
         height: 0px;
         transform-origin: top;
-        transition: 200ms ease-in-out;
+        transition: 300ms ease-in-out;
     }
 
     .nav-toggle:checked ~ .burger-utility {
-        height: 164px;
+        height: 160px;
+    }
+
+    .nav-toggle:checked ~ .burger-utility a {
+        opacity: 1;
+        transition: 200ms ease-in-out 80ms;
     }
 
     .nav-toggle-label {
@@ -437,6 +456,14 @@ button:hover {
         margin-right: 2rem;
         height: 100%;
     }
+
+    .burger-utility a {
+        opacity: 0;
+        transition: 200ms ease-in-out;
+    }
+
+
+    /* Burger Bars */
 
     .nav-toggle-label span,
     .nav-toggle-label span::before,
@@ -462,5 +489,28 @@ button:hover {
     .nav-toggle-label span::after {
         top: 7px;
     }
+
+    /* About Styling */
+
+    #about {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    /* Projects Styling */
+
+    .projectgallery-grid-container {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+
+    /* Skills Styling */
+    
+    .skills-grid-container {
+        grid-template-columns: repeat(4, auto);
+    }
+
+
 
 }
